@@ -7,25 +7,32 @@ import javax.persistence.Id;
 
 @Entity
 public class EmployeeDetails {
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int employeeId;
 	private String employeeName;
 	private int employeeAge;
 	private String employeeCountry;
 	
+	private String message;
 	public EmployeeDetails() {
 		super();
 		
 	}
 
-	public EmployeeDetails(int employeeId, String employeeName, int employeeAge, String employeeCountry) {
+	
+
+	public EmployeeDetails(int employeeId, String employeeName, int employeeAge, String employeeCountry,
+			String message) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
 		this.employeeAge = employeeAge;
 		this.employeeCountry = employeeCountry;
+		this.message = message;
 	}
+
+
 
 	public int getEmployeeId() {
 		return employeeId;
@@ -59,11 +66,27 @@ public class EmployeeDetails {
 		this.employeeCountry = employeeCountry;
 	}
 
+
+
+	public String getMessage() {
+		return message;
+	}
+
+
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "EmployeeDetails [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeAge="
-				+ employeeAge + ", employeeCountry=" + employeeCountry + "]";
+				+ employeeAge + ", employeeCountry=" + employeeCountry + ", message=" + message + "]";
 	}
+
+	
 	
 	
 }

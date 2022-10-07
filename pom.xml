@@ -38,9 +38,9 @@
 			<scope>test</scope>
 		</dependency>
 	<dependency>
-    <groupId>com.opencsv</groupId>
-    <artifactId>opencsv</artifactId>
-    <version>4.1</version>
+	<groupId>com.opencsv</groupId>
+	<artifactId>opencsv</artifactId>
+	<version>3.8</version>
 </dependency>
 	</dependencies>
 
