@@ -27,7 +27,7 @@ public class EmployeeController {
 		FinalResponse saveDetails = saveEmployeeDetailsImpl.saveDetails(file);
 		List<EmployeeDetails> errorData = saveEmployeeDetailsImpl.getErrorData();
 		for(int i=0;i<errorData.size();i++) {
-			logger.info("Id= "+errorData.get(i).getEmployeeId()+", Reason= "+errorData.get(i).getMessage());
+			logger.info("Id= "+errorData.get(i).getEmployeeId()+", Reasons= "+errorData.get(i).getMessage());
 		}
 		return ResponseEntity.ok(saveDetails);
 	}
